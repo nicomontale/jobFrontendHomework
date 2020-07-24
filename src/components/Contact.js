@@ -27,10 +27,10 @@ export default class Contact extends Component {
                 <Link to="./resume"><img src={img1}
                         alt="avatar"
                         className="avatar-image"/></Link>
-                    <div className="banner-text">
+                   
                         <h2 style={{color:'white',fontFamily: 'Roboto Mono,monospace'}}>Contact Me</h2>
 
-                        <hr />
+                        
                        
                         <div className="contact">
                             {/* Linkedin */}
@@ -45,7 +45,7 @@ export default class Contact extends Component {
         </label>
       </form>
       
-                        </div>
+                        
                     </div>
                 </Cell>
             </Grid>
