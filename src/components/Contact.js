@@ -21,8 +21,9 @@ export default class Contact extends Component {
       }
     render() {
         return (
+            
+            <Grid  className="landing-grid">
             <div className="login">
-            <Grid className="landing-grid">
                 <Cell col={12}>
                 <Link to="./resume"><img src={img1}
                         alt="avatar"
@@ -48,8 +49,9 @@ export default class Contact extends Component {
                         
                     </div>
                 </Cell>
+                </div>
             </Grid>
-        </div>
+      
         )
     }
 }
