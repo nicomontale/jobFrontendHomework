@@ -24,7 +24,7 @@ export default class Contact extends Component {
             
             <Grid  className="landing-grid">
             <div className="login">
-                <Cell col={12}>
+                <Cell col={12} style={{position: "initial"}}>
                 <Link to="./resume"><img src={img1}
                         alt="avatar"
                         className="avatar-image"/></Link>
