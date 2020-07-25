@@ -4,8 +4,40 @@ import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
 import img1 from '../components/react-me.png';
+import Tappable from 'react-tappable/lib/Tappable'
 class PrivateArea extends Component {
+   state = {
+    openDialogEditEducation:false
+   }
+    ShowEditEducation= (openDialogEditEducation)=> {
+        if(openDialogEditEducation) {
+        return (
+            (
+                <dialog open
+                    className="modal"
+
+
+                    onClick={this.handleShowEditEducation}
+                >
+                <div style={{ width:'300px', height:'420px' }}>
+                <label>
+                <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white', marginBottom: '60px'}} type="submit" value="Submit" onClick={this.handleShowEditEducation}/>
+                </label>
+                </div>
+                </dialog>
+            )
+        
+        )
+            }
+    }
+    handleShowEditEducation = () => {
+        this.setState({ openDialogEditEducation: !this.state.openDialogEditEducation });
+        console.log('cliked');
+    };
     render() {
+        const {openDialogEditEducation}=this.state;
         return(
         <div>
         <Grid style={{backgroundColor: ' #fc9c35'}}>
@@ -56,11 +88,13 @@ class PrivateArea extends Component {
         schoolName="Liceo Scientifico Galileo Ferraris"
         schoolDescription="Diploma" />
         <div style={{textAlign: 'center'}}>
-        <Button className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
+        <Tappable onTap={this.handleShowEditEducation} style={{ cursor: 'pointer' }}>
+        <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
         <Icon style={{ textAlign:'center'}}  name="add" />
         </div>
     </Button>
+    </Tappable>
         </div>
 
         <hr style={{borderTop:'4px solid black'}} />
@@ -129,7 +163,7 @@ class PrivateArea extends Component {
         </div>
         </Cell>
         
-        
+        {this.ShowEditEducation(openDialogEditEducation)}
         </Grid>
         
         
