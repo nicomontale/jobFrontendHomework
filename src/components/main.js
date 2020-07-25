@@ -6,6 +6,7 @@ import Project from './project';
 import Resume from './resume';
 import Contact from './Contact';
 import Login from './Login';
+import PrivateArea from './PrivateArea';
 const Main =()=>(
     <Switch>
     <Route exact path="/" component={LandingPage}/>
@@ -13,6 +14,7 @@ const Main =()=>(
     <Route exact path="/resume" component={Resume}/>
     <Route exact path="/contact" component={Contact}/>
     <Route exact path="/login" component={Login}/>
+    <Route exact path="/privateArea" component={PrivateArea}/>
     </Switch>
 
 )

@@ -423,16 +423,10 @@ cursor: pointer;
 
 
 
-.register {
-  width: 400px;
-}
 
 
-.register h2 {
-  font-size: 45px;
-  text-transform: uppercase;
-  text-align: center;
-}
+
+
 
 .login {
   justify-content: center;
@@ -454,6 +448,9 @@ input[type='text'] {
   width: 75%;
   padding: 20px 30px;
   border-radius: 30px;
+}
+.username {
+  margin-top: 20px;
 }
 
 textarea {
@@ -482,7 +479,7 @@ input[type='password'] {
 
 input[type='submit'] {
   padding: 15px 0px;
-  background-color:#c66600;
+  background-color:#944e03;
   color: #fff;
   font-size: 20px;
   margin-top: 10px;
@@ -528,5 +525,14 @@ input[type='submit'] {
     border-radius: 30px;
     
   }
+  .privatebutton {
+  text-align: center;
+   background-color: #fc9c35;
+   -webkit-box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
+   -moz-box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
+   box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
+   border-radius: 60px;
+  }
+  
 }
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */

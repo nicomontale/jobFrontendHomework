@@ -41,8 +41,8 @@ export default class Contact extends Component {
          
           <input placeholder="Email..." style={{marginTop:'10px'}} type="text" value={this.state.value} onChange={this.handleChange} />
           
-        <textarea placeholder="Contact me.."   />
-        <input style={{marginTop:'10px'}} type="submit" value="Submit" />
+        <textarea placeholder="Contact me.."  type="text" />
+        <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white'}} type="submit" value="Submit" />
         </label>
       </form>
       

@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react';
-
+import {Link} from 'react-router-dom'
 import {Grid, Cell} from 'react-mdl';
 class Login extends Component {
 	constructor(props) {
@@ -41,7 +41,7 @@ class Login extends Component {
             <Grid className="login">
 			<Cell col={12}>
 				<form onSubmit={this.displayLogin}>
-					<h2>Login</h2>
+					<i class="fa fa-lock" style={{fontSize:'80px'}} aria-hidden="true"></i>
 					<div className="username">
 						<input
 							type="text"
@@ -54,6 +54,7 @@ class Login extends Component {
 
 					<div className="password">
 						<input
+						    
 							type="password"
 							placeholder="Password..."
 							value={this.state.password}
@@ -61,8 +62,9 @@ class Login extends Component {
 							name="password"
 						/>
 					</div>
-
-					<input type="submit" value="Login" />
+                    <Link to="/privateArea">
+					<input style={{backgroundColor: "#944e03", color: 'white'}} type="submit" value="Login" />
+					</Link>
 				</form>
 
                 </Cell>
