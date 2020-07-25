@@ -7,10 +7,12 @@ import img1 from '../components/react-me.png';
 import Tappable from 'react-tappable/lib/Tappable'
 class PrivateArea extends Component {
    state = {
-    openDialogEditEducation:false
+    openDialogEditEducation:false,
+    openDialogEditExperience: false,
+    openDialogEditSkills: false
    }
-    ShowEditEducation= (openDialogEditEducation)=> {
-        if(openDialogEditEducation) {
+    ShowEditEducation= (openDialogEditEducation, openDialogEditExperience, openDialogEditSkills)=> {
+        if(openDialogEditEducation===true && openDialogEditExperience===false && openDialogEditSkills===false) {
         return (
             (
                 <dialog open
@@ -19,10 +21,11 @@ class PrivateArea extends Component {
 
                     onClick={this.handleShowEditEducation}
                 >
-                <div style={{ width:'300px', height:'420px' }}>
+                <div style={{ width:'300px', height:'450px' }}>
                 <label>
-                <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
-                <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                <textarea placeholder="Date.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                <textarea placeholder="Place.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                <textarea placeholder="Certificate.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
                 <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white', marginBottom: '60px'}} type="submit" value="Submit" onClick={this.handleShowEditEducation}/>
                 </label>
                 </div>
@@ -31,13 +34,64 @@ class PrivateArea extends Component {
         
         )
             }
+            if(openDialogEditEducation===false && openDialogEditExperience===true && openDialogEditSkills===false) {
+                return (
+                    (
+                        <dialog open
+                            className="modal"
+        
+        
+                            onClick={this.handleShowEditEducation}
+                        >
+                        <div style={{ width:'300px', height:'450px' }}>
+                        <label>
+                        <textarea placeholder="Date.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                        <textarea placeholder="Place.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                        <textarea placeholder="Certificate.."  type="text"  style={{cursor: 'pointer', height:'50px', marginTop: '20px'}}/>
+                        <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white', marginBottom: '60px'}} type="submit" value="Submit" onClick={this.handleShowEditEducation}/>
+                        </label>
+                        </div>
+                        </dialog>
+                    )
+                
+                )
+                    }
+                    if(openDialogEditEducation===false && openDialogEditExperience===false && openDialogEditSkills===true) {
+                        return (
+                            (
+                                <dialog open
+                                    className="modal"
+                
+                
+                                    onClick={this.handleShowEditEducation}
+                                >
+                                <div style={{ width:'300px', height:'450px' }}>
+                                <label>
+                                <textarea placeholder="Skill.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                                <textarea placeholder="Date.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                                </label>
+                                </div>
+                                </dialog>
+                            )
+                        
+                        )
+                            }
     }
     handleShowEditEducation = () => {
         this.setState({ openDialogEditEducation: !this.state.openDialogEditEducation });
         console.log('cliked');
     };
+    handleShowEditExperience = () => {
+        this.setState({ openDialogEditEducation: !this.state.openDialogEditExperience });
+        console.log('cliked');
+    };
+    handleShowEditSkills = () => {
+        this.setState({ openDialogEditEducation: !this.state.openDialogEditSkills });
+        console.log('cliked');
+    };
+
     render() {
-        const {openDialogEditEducation}=this.state;
+        const {openDialogEditEducation,openDialogEditExperience, openDialogEditSkills}=this.state;
         return(
         <div>
         <Grid style={{backgroundColor: ' #fc9c35'}}>
@@ -113,11 +167,13 @@ class PrivateArea extends Component {
         jobsDescriptions="With some of my friends we tried to start a clothing brand."
         />
         <div style={{textAlign: 'center'}}>
-        <Button className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
+        <Tappable onTap={this.handleShowEditExperience} style={{ cursor: 'pointer' }}>
+        <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
         <Icon style={{ textAlign:'center'}}  name="add" />
         </div>
     </Button>
+    </Tappable>
         </div>
         
         <hr style={{borderTop:'4px solid black'}} />
@@ -155,15 +211,17 @@ class PrivateArea extends Component {
         progress={60}
         /> 
         <div style={{textAlign: 'center', marginTop:'20px'}}>
-        <Button className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
+        <Tappable onTap={this.handleShowEditSkills} style={{ cursor: 'pointer' }}>
+        <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
         <Icon style={{ textAlign:'center'}}  name="add" />
         </div>
     </Button>
+    </Tappable>
         </div>
         </Cell>
         
-        {this.ShowEditEducation(openDialogEditEducation)}
+        {this.ShowEditEducation(openDialogEditEducation,openDialogEditExperience,openDialogEditSkills)}
         </Grid>
         
         
