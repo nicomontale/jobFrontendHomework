@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Grid, Cell } from 'react-mdl';
 import img1 from '../components/react-me.png';
 import {Link} from 'react-router-dom';
+
 export default class Contact extends Component {
     constructor(props) {
         super(props);
@@ -41,7 +42,7 @@ export default class Contact extends Component {
          
           <input placeholder="Email..." style={{marginTop:'10px'}} type="text" value={this.state.value} onChange={this.handleChange} />
           
-        <textarea placeholder="Contact me.."  type="text" />
+        <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer'}}/>
         <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white'}} type="submit" value="Submit" />
         </label>
       </form>
