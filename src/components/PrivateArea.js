@@ -9,7 +9,8 @@ class PrivateArea extends Component {
    state = {
     openDialogEditEducation:false,
     openDialogEditExperience: false,
-    openDialogEditSkills: false
+    openDialogEditSkills: false,
+    openDialogChange: false
    }
     ShowEditEducation= (openDialogEditEducation, openDialogEditExperience, openDialogEditSkills)=> {
         if(openDialogEditEducation===true && openDialogEditExperience===false && openDialogEditSkills===false) {
@@ -68,7 +69,8 @@ class PrivateArea extends Component {
                                 <div style={{ width:'300px', height:'450px' }}>
                                 <label>
                                 <textarea placeholder="Skill.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
-                                <textarea placeholder="Date.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                                <textarea placeholder="%.."  type="text"  style={{cursor: 'pointer', height:'20px', marginTop: '20px'}}/>
+                                <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white', marginBottom: '60px'}} type="submit" value="Submit" onClick={this.handleShowEditEducation}/>
                                 </label>
                                 </div>
                                 </dialog>
@@ -77,6 +79,31 @@ class PrivateArea extends Component {
                         )
                             }
     }
+
+    showDialogChange =(openDialogChange)=> {
+        if(openDialogChange) {
+            return (
+                <dialog open
+                className="modal"
+
+                style={{flexDirection:'column'}}
+                onClick={this.handleShowEditChange}
+            >
+            <div style={{ width:'170px', height:'250px', }}>
+            
+            
+            <input style={{marginTop:'20px',backgroundColor: "#944e03", color: 'white',height:'60px', width:'100px'}} type="submit" value="Change" onClick={this.handleShowEditChange}/>
+           <div></div>
+           
+            <input style={{marginTop:'60px',backgroundColor: "#944e03", color: 'white',height:'60px', width:'100px'}} type="submit" value="Delete" onClick={this.handleShowEditChange}/>
+            
+            </div>
+            </dialog>
+            )
+        }
+
+    }
+
     handleShowEditEducation = () => {
         this.setState({ openDialogEditEducation: !this.state.openDialogEditEducation });
         console.log('cliked');
@@ -90,8 +117,13 @@ class PrivateArea extends Component {
         console.log('cliked');
     };
 
+    handleShowEditChange= ()=> {
+        this.setState({openDialogChange: !this.state.openDialogChange});
+        console.log('clicked')
+    }
+
     render() {
-        const {openDialogEditEducation,openDialogEditExperience, openDialogEditSkills}=this.state;
+        const {openDialogEditEducation,openDialogEditExperience, openDialogEditSkills, openDialogChange}=this.state;
         return(
         <div>
         <Grid style={{backgroundColor: ' #fc9c35'}}>
@@ -117,31 +149,48 @@ class PrivateArea extends Component {
         <Cell col={8} className="resume-right-col">
         <h2 style={{ paddingTop: '1em', fontFamily: 'Roboto Mono,monospace' }}>Education</h2>
         
+       <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
        
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        
+        </div>
+      
         <Education 
         startYear= {2020}
         
         schoolName="PCM"
-        schoolDescription="Junior Java Developer" />
+        schoolDescription="Junior Java Developer" /> 
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
+        
         <Education 
         startYear= {2019}
         endYear={2020}
         schoolName="Talent Garden Innovation School"
         schoolDescription="Frontend Master (React)" />
         
-
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
         <Education 
         startYear= {2014}
         endYear={2019}
         schoolName="Politecnico Di Torino"
         schoolDescription="Bachelor's degree, Management Engineering (IT branch)" />
-
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
         <Education 
         startYear= {2009}
         endYear={2014}
         schoolName="Liceo Scientifico Galileo Ferraris"
         schoolDescription="Diploma" />
-        <div style={{textAlign: 'center'}}>
+        <div style={{textAlign: 'center'}} onClick={this.handleShowEditChange}>
         <Tappable onTap={this.handleShowEditEducation} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
@@ -154,19 +203,26 @@ class PrivateArea extends Component {
         <hr style={{borderTop:'4px solid black'}} />
 
         <h2 style={{fontFamily: 'Roboto Mono,monospace' }}>Experience</h2>
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
         <Experience 
         startYear={2020}
         jobsName="Junior Developer"
         jobsDescriptions="Back-end Developer"
         />
-
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
         <Experience 
         startYear={2013}
         endYear={2016}
         jobsName="Junior Social Media Manager"
         jobsDescriptions="With some of my friends we tried to start a clothing brand."
         />
-        <div style={{textAlign: 'center'}}>
+        <div style={{textAlign: 'center'}} onClick={this.handleShowEditChange}>
         <Tappable onTap={this.handleShowEditExperience} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
@@ -178,6 +234,10 @@ class PrivateArea extends Component {
         
         <hr style={{borderTop:'4px solid black'}} />
         <h2 style={{fontFamily: 'Roboto Mono,monospace' }}>Skills</h2>
+        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
+        </i>
+        </div>
         <Skills
         Skills="JAVA         "
         progress={80}
@@ -222,6 +282,7 @@ class PrivateArea extends Component {
         </Cell>
         
         {this.ShowEditEducation(openDialogEditEducation,openDialogEditExperience,openDialogEditSkills)}
+        {this.showDialogChange(openDialogChange)}
         </Grid>
         
         

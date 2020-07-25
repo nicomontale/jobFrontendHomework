@@ -38,7 +38,7 @@ class App extends React.Component{
             <Link  style={{textDecoration:'white',fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/resume">RESUME</Link>
             <Link style={{textDecoration:'white' ,fontSize:'20px', fontFamily: 'Roboto Mono,monospace' }} to="/project">PROJECTS</Link>
             <Link  style={{textDecoration:'white',fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/contact">CONTACT</Link>
-            <Link  style={{textDecoration:'white',fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/login">LOGIN</Link>
+            <Link  style={{textDecoration:'white',fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/login">PRIVATE AREA</Link>
           
           
         </Navigation>
@@ -49,7 +49,7 @@ class App extends React.Component{
         <Link onClick={()=>document.querySelector('.mdl-layout__drawer').addEventListener('click', this.close())}  style={{textDecoration:'white', color:'black', fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/resume">RESUME</Link>
         <Link onClick={()=>document.querySelector('.mdl-layout__drawer').addEventListener('click', this.close())}  style={{textDecoration:'white',color:'black', fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/project">PROJECTS</Link>
         <Link onClick={()=>document.querySelector('.mdl-layout__drawer').addEventListener('click', this.close())}  style={{textDecoration:'white', color:'black', fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/contact">CONTACT</Link>
-        <Link onClick={()=>document.querySelector('.mdl-layout__drawer').addEventListener('click', this.close())}  style={{textDecoration:'white', color:'black', fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/login">LOGIN</Link>
+        <Link onClick={()=>document.querySelector('.mdl-layout__drawer').addEventListener('click', this.close())}  style={{textDecoration:'white', color:'black', fontSize:'20px', fontFamily: 'Roboto Mono,monospace'}} to="/login">PRIVATE AREA</Link>
         
         </Navigation>
     </Drawer>
