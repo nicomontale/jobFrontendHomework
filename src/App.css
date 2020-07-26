@@ -449,6 +449,16 @@ input[type='text'] {
   padding: 20px 30px;
   border-radius: 30px;
 }
+input[type='email'] {
+  background-color: #e6e6e6;
+  color: #827ffe;
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: none;
+  width: 75%;
+  padding: 20px 30px;
+  border-radius: 30px;
+}
 .username {
   margin-top: 20px;
 }
@@ -479,7 +489,7 @@ input[type='password'] {
 
 input[type='submit'] {
   padding: 15px 0px;
-  background-color:#944e03;
+  background-color:#944e03 !important;
   color: #fff;
   font-size: 20px;
   margin-top: 10px;
@@ -515,7 +525,7 @@ input[type='submit'] {
   }
   .login input[type='submit'] {
     padding: 15px 0px;
-    background-color:#c66600;
+    background-color:#c66600 !important;
     color: #fff;
     font-size: 20px;
     margin-top: 10px;
@@ -527,7 +537,7 @@ input[type='submit'] {
   }
   .privatebutton {
   text-align: center;
-   background-color: #fc9c35;
+   background-color: #fc9c35 !important;
    -webkit-box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
    -moz-box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
    box-shadow: 15px -3px 10px -10px rgba(0,0,0,0.75);
