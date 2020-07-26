@@ -67,7 +67,7 @@ export default class Contact extends Component {
           <label>
         <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer'}}/>
         </label>
-        <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white'}} type="submit" value="Submit" />
+        <input style={{marginTop:'10px', color: 'white'}} type="submit" value="Submit" />
         
       </form>
       
