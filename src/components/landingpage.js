@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-import img1 from '../components/react-me.png';
+import img1 from '../components/img/react-me.png';
 import {Link} from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 class LandingPage extends Component {
     render() {
+       Aos.init({})
         return (
             <div style={{ width: '100%', margin: 'auto'}}>
                 <Grid className="landing-grid">
                     <Cell col={12}>
-                    <Link to="./resume"><img src={img1}
+                    <Link to="./resume"><img data-aos="zoom-in" src={img1}
                             alt="avatar"
                             className="avatar-image"/></Link>
-                        <div className="banner-text">
+                        <div data-aos="zoom-in" data-aos-duration="8000" className="banner-text">
                             <h2 style={{color:'white',fontFamily: 'Roboto Mono,monospace'}}>Junior Developer</h2>
 
                             <hr />

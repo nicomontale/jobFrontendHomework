@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import {Grid, Cell, Button, Icon} from 'react-mdl';
 import Education from './Education';
-import Experience from './Experience';
 import Skills from './Skills';
-import img1 from '../components/react-me.png';
-import Tappable from 'react-tappable/lib/Tappable'
+import img1 from '../components/img/react-me.png';
+import Tappable from 'react-tappable/lib/Tappable';
+import {CurriculumConsumer} from './context'
 class PrivateArea extends Component {
    state = {
     openDialogEditEducation:false,
@@ -149,47 +149,29 @@ class PrivateArea extends Component {
         <Cell col={8} className="resume-right-col">
         <h2 style={{ paddingTop: '1em', fontFamily: 'Roboto Mono,monospace' }}>Education</h2>
         
-       <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+       
+        <CurriculumConsumer>
+        {
+            value=>{
+            return value.education.map(item=> {
+               
+                return( 
+                    <>
+                    <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
        
         <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
         </i>
         
         </div>
-      
-        <Education 
-        startYear= {2020}
-        
-        schoolName="PCM"
-        schoolDescription="Junior Java Developer" /> 
-        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
-        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
-        </i>
-        </div>
-        
-        <Education 
-        startYear= {2019}
-        endYear={2020}
-        schoolName="Talent Garden Innovation School"
-        schoolDescription="Frontend Master (React)" />
-        
-        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
-        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
-        </i>
-        </div>
-        <Education 
-        startYear= {2014}
-        endYear={2019}
-        schoolName="Politecnico Di Torino"
-        schoolDescription="Bachelor's degree, Management Engineering (IT branch)" />
-        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
-        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
-        </i>
-        </div>
-        <Education 
-        startYear= {2009}
-        endYear={2014}
-        schoolName="Liceo Scientifico Galileo Ferraris"
-        schoolDescription="Diploma" />
+                    <Education key={item.id} item={item}/>
+                    </>
+                    )
+            })
+
+            }
+        }
+        </CurriculumConsumer>
+       
         <div style={{textAlign: 'center'}}>
         <Tappable onTap={this.handleShowEditEducation} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
@@ -203,25 +185,29 @@ class PrivateArea extends Component {
         <hr style={{borderTop:'4px solid black'}} />
 
         <h2 style={{fontFamily: 'Roboto Mono,monospace' }}>Experience</h2>
-        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+        
+        <CurriculumConsumer>
+        {
+            value=>{
+            return value.education.map(item=> {
+               
+                return( 
+                    <>
+                    <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
+       
         <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
         </i>
+        
         </div>
-        <Experience 
-        startYear={2020}
-        jobsName="Junior Developer"
-        jobsDescriptions="Back-end Developer"
-        />
-        <div style={{textAlign: 'right'}} onClick={this.handleShowEditChange}>
-        <i class="fa fa-cog" style={{fontSize:'20px'}} aria-hidden="true">
-        </i>
-        </div>
-        <Experience 
-        startYear={2013}
-        endYear={2016}
-        jobsName="Junior Social Media Manager"
-        jobsDescriptions="With some of my friends we tried to start a clothing brand."
-        />
+                    <Education key={item.id} item={item}/>
+                    </>
+                    )
+            })
+
+            }
+        }
+        </CurriculumConsumer>
+        
         <div style={{textAlign: 'center'}}>
         <Tappable onTap={this.handleShowEditExperience} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>

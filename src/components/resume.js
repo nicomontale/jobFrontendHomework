@@ -3,13 +3,24 @@ import {Grid, Cell} from 'react-mdl';
 import Education from './Education';
 import Experience from './Experience';
 import Skills from './Skills';
-import img1 from '../components/react-me.png';
+import img1 from '../components/img/react-me.png';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
+import {Educations, Experiences} from './data';
+import {CurriculumConsumer} from './context';
 class Resume extends Component {
+    state= {
+        education : Educations,
+        experience : Experiences
+    }
     render() {
+       
+        Aos.init({})
         return(
+            
         <div>
         <Grid style={{backgroundColor: ' #fc9c35'}}>
-        <Cell col={4}> 
+        <Cell data-aos="fade-right" data-aos-duration="1000" col={4}> 
         <div  style={{textAlign:'center', }}>
         <img src={img1}
         alt="avatar"
@@ -28,47 +39,35 @@ class Resume extends Component {
         <h5 style={{paddingTop: '1em',fontFamily: 'Roboto Mono,monospace'}}>Email</h5>
         <p><a style={{ color: "black"}} href="mailto:nicola.montaleone95@gmail.com" target="_top">Email: nicola.montaleone95@gmail.com</a></p>
         </Cell>
-        <Cell col={8} className="resume-right-col">
+        <Cell  col={8} className="resume-right-col">
         <h2 style={{ paddingTop: '1em', fontFamily: 'Roboto Mono,monospace' }}>Education</h2>
-        <Education 
-        startYear= {2020}
-        
-        schoolName="PCM"
-        schoolDescription="Junior Java Developer" />
-        <Education 
-        startYear= {2019}
-        endYear={2020}
-        schoolName="Talent Garden Innovation School"
-        schoolDescription="Frontend Master (React)" />
-        
+        <CurriculumConsumer>
+        {
+            value=>{
+            return value.education.map(item=> {
+               
+                return <Education key={item.id} item={item}/>
+            })
 
-        <Education 
-        startYear= {2014}
-        endYear={2019}
-        schoolName="Politecnico Di Torino"
-        schoolDescription="Bachelor's degree, Management Engineering (IT branch)" />
-
-        <Education 
-        startYear= {2009}
-        endYear={2014}
-        schoolName="Liceo Scientifico Galileo Ferraris"
-        schoolDescription="Diploma" />
+            }
+        }
+        </CurriculumConsumer>
+        
 
         <hr style={{borderTop:'4px solid black'}} />
 
         <h2 style={{fontFamily: 'Roboto Mono,monospace' }}>Experience</h2>
-        <Experience 
-        startYear={2020}
-        jobsName="Junior Developer"
-        jobsDescriptions="Back-end Developer"
-        />
+        <CurriculumConsumer>
+        {
+            value=>{
+            return value.experience.map(item=> {
+               
+                return <Experience key={item.id} experience={item}/>
+            })
 
-        <Experience 
-        startYear={2013}
-        endYear={2016}
-        jobsName="Junior Social Media Manager"
-        jobsDescriptions="With some of my friends we tried to start a clothing brand."
-        />
+            }
+        }
+        </CurriculumConsumer>
         <hr style={{borderTop:'4px solid black'}} />
         <h2 style={{fontFamily: 'Roboto Mono,monospace' }}>Skills</h2>
         <Skills

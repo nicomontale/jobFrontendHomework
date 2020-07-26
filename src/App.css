@@ -217,7 +217,7 @@ html, body {overflow-x: scroll;}
   
 }
 .mdl-card__title_ntt{
-  background-image: url('./components/ntt_data.png');
+  background-image: url('./components/img/ntt_data.png');
   background-repeat: no-repeat;
 background-position: 0 0;
 -moz-background-size: cover;
@@ -227,7 +227,7 @@ background-size: cover;
 
 }
 .mdl-card__title_triporate {
-  background-image: url('./components/triporate.png');
+  background-image: url('./components/img/triporate.png');
   background-repeat: no-repeat;
 background-position: 0 0;
 -moz-background-size: cover;
@@ -237,7 +237,7 @@ background-size: cover;
 
 }
 .mdl-card__title_e_commerce {
-  background-image: url('./components/site.png');
+  background-image: url('./components/img/site.png');
   background-repeat: no-repeat;
 background-position: 0 0;
 -moz-background-size: cover;
@@ -249,7 +249,7 @@ background-size: cover;
 
 .mdl-card__title_tesi {
 
-  background-image: url('./components/tesi.png');
+  background-image: url('./components/img/tesi.png');
   background-repeat: no-repeat;
 background-position: 0 0;
 -moz-background-size: cover;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Grid, Cell } from 'react-mdl';
-import img1 from '../components/react-me.png';
+import img1 from '../components/img/react-me.png';
 import {Link} from 'react-router-dom';
 var nodemailer = require('nodemailer');
 
@@ -67,7 +67,7 @@ export default class Contact extends Component {
           <label>
         <textarea placeholder="Contact me.."  type="text"  style={{cursor: 'pointer'}}/>
         </label>
-        <input style={{marginTop:'10px', color: 'white'}} type="submit" value="Submit" />
+        <input style={{marginTop:'10px',backgroundColor: "#944e03", color: 'white'}} type="submit" value="Submit" />
         
       </form>
       

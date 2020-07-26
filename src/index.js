@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 import {BrowserRouter} from 'react-router-dom';
-
+import {CurriculumProvider} from './components/context'
 ReactDOM.render(
+  <CurriculumProvider>
     <BrowserRouter>
     <App />
     </BrowserRouter>
+    </CurriculumProvider>
     
     , document.getElementById('root'));
 
