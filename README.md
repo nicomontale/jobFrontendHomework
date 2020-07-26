@@ -77,4 +77,10 @@ Context: https://it.reactjs.org/docs/context.html<br />
 
 
 ###  UX
-<img src="/UX/UX1.png" alt="Profile"/>
+<img src="/UX/1.png" alt="Img1"/>
+
+<img src="/UX/2.png" alt="Img2"/>
+<img src="/UX/3.png" alt="Img3"/>
+<img src="/UX/4.png" alt="Img4"/>
+<img src="/UX/5.png" alt="Img5"/>
+<img src="/UX/6.png" alt="Img6"/>
