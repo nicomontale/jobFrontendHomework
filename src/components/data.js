@@ -45,4 +45,47 @@ export const Experiences= [
         jobDescription:"With some of my friends we tried to start a clothing brand."
     },
 ]
+export const SkillsData = [
+    {
+        id:1,
+        Skills:'JAVA         ',
+        progress: 80
+
+    },{
+        id:2,
+        Skills:'REACT         ',
+        progress: 65
+
+    },{
+        id:3,
+        Skills:'REACT NATIVE',
+        progress: 60
+
+    },{
+        id:4,
+        Skills:'MySQL         ',
+        progress: 65
+
+    },{
+        id:5,
+        Skills:'ECLIPSE        ',
+        progress: 75
+
+    },{
+        id:6,
+        Skills:'VISUAL STUDIO',
+        progress: 60
+
+    },{
+        id:7,
+        Skills:'BACK-END         ',
+        progress: 60
+
+    },{
+        id:8,
+        Skills:'FRONT-END         ',
+        progress: 60
+
+    },
+]
 

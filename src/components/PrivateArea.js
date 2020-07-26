@@ -224,38 +224,17 @@ class PrivateArea extends Component {
                             <i class="fa fa-cog" style={{ fontSize: '20px' }} aria-hidden="true">
                             </i>
                         </div>
-                        <Skills
-                            Skills="JAVA         "
-                            progress={80}
-                        />
-                        <Skills
-                            Skills="REACT        "
-                            progress={65}
-                        />
-                        <Skills
-                            Skills="REACT NATIVE"
-                            progress={60}
-                        />
-                        <Skills
-                            Skills="MySQL        "
-                            progress={75}
-                        /> <Skills
-                            Skills="ECLIPSE      "
-                            progress={75}
-                        />
-                        <Skills
-                            Skills="VISUAL STUDIO"
-                            progress={60}
-                        />
+                        <CurriculumConsumer>
+                        {
+                            value => {
+                                return value.skills.map(item => {
 
-                        <Skills
-                            Skills="BACK-END     "
-                            progress={60}
-                        />
-                        <Skills
-                            Skills="FRONT-END"
-                            progress={60}
-                        />
+                                    return <Skills key={item.id} item={item} />
+                                })
+
+                            }
+                        }
+                    </CurriculumConsumer>
                         <div style={{ textAlign: 'center', marginTop: '20px' }}>
                             <Tappable onTap={this.handleShowEditSkills} style={{ cursor: 'pointer' }}>
                                 <Button className="privatebutton" style={{ backgroundColor: '#fc9c35' }}>

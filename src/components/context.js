@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Educations, Experiences } from './data';
+import { Educations, Experiences,SkillsData } from './data';
 const CurriculumContext = React.createContext();
 
 
@@ -9,7 +9,8 @@ const CurriculumContext = React.createContext();
 class CurriculumProvider extends Component {
     state = {
         education: Educations,
-        experience: Experiences
+        experience: Experiences,
+        skills : SkillsData
     }
 
 

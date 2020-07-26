@@ -6,12 +6,13 @@ import Skills from './Skills';
 import img1 from '../components/img/react-me.png';
 import Aos from 'aos';
 import 'aos/dist/aos.css'
-import { Educations, Experiences } from './data';
+import { Educations, Experiences,SkillsData } from './data';
 import { CurriculumConsumer } from './context';
 class Resume extends Component {
     state = {
         education: Educations,
-        experience: Experiences
+        experience: Experiences,
+        skills: SkillsData
     }
     render() {
 
@@ -70,38 +71,17 @@ class Resume extends Component {
                         </CurriculumConsumer>
                         <hr style={{ borderTop: '4px solid black' }} />
                         <h2 style={{ fontFamily: 'Roboto Mono,monospace' }}>Skills</h2>
-                        <Skills
-                            Skills="JAVA         "
-                            progress={80}
-                        />
-                        <Skills
-                            Skills="REACT        "
-                            progress={65}
-                        />
-                        <Skills
-                            Skills="REACT NATIVE"
-                            progress={60}
-                        />
-                        <Skills
-                            Skills="MySQL        "
-                            progress={75}
-                        /> <Skills
-                            Skills="ECLIPSE      "
-                            progress={75}
-                        />
-                        <Skills
-                            Skills="VISUAL STUDIO"
-                            progress={60}
-                        />
+                        <CurriculumConsumer>
+                        {
+                            value => {
+                                return value.skills.map(item => {
 
-                        <Skills
-                            Skills="BACK-END     "
-                            progress={60}
-                        />
-                        <Skills
-                            Skills="FRONT-END"
-                            progress={60}
-                        />
+                                    return <Skills key={item.id} item={item} />
+                                })
+
+                            }
+                        }
+                    </CurriculumConsumer>
                     </Cell>
 
 
