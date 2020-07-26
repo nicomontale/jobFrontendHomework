@@ -69,11 +69,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 ###  LIBRARIES
 
-•React-mdl
-•Aos
+•React-mdl<br />
+•Aos<br />
 
 ###  DATA
-Context: https://it.reactjs.org/docs/context.html
+Context: https://it.reactjs.org/docs/context.html<br />
 
 
 ###  UX
