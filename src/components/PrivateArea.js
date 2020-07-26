@@ -42,7 +42,7 @@ class PrivateArea extends Component {
                             className="modal"
         
         
-                            onClick={this.handleShowEditEducation}
+                            onClick={this.handleShowEditExperience}
                         >
                         <div style={{ width:'300px', height:'450px' }}>
                         <label>
@@ -64,7 +64,7 @@ class PrivateArea extends Component {
                                     className="modal"
                 
                 
-                                    onClick={this.handleShowEditEducation}
+                                    onClick={this.handleShowEditSkills}
                                 >
                                 <div style={{ width:'300px', height:'450px' }}>
                                 <label>
@@ -109,11 +109,11 @@ class PrivateArea extends Component {
         console.log('cliked');
     };
     handleShowEditExperience = () => {
-        this.setState({ openDialogEditEducation: !this.state.openDialogEditExperience });
+        this.setState({ openDialogEditExperience: !this.state.openDialogEditExperience });
         console.log('cliked');
     };
     handleShowEditSkills = () => {
-        this.setState({ openDialogEditEducation: !this.state.openDialogEditSkills });
+        this.setState({ openDialogEditSkills: !this.state.openDialogEditSkills });
         console.log('cliked');
     };
 
@@ -190,7 +190,7 @@ class PrivateArea extends Component {
         endYear={2014}
         schoolName="Liceo Scientifico Galileo Ferraris"
         schoolDescription="Diploma" />
-        <div style={{textAlign: 'center'}} onClick={this.handleShowEditChange}>
+        <div style={{textAlign: 'center'}}>
         <Tappable onTap={this.handleShowEditEducation} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
@@ -222,7 +222,7 @@ class PrivateArea extends Component {
         jobsName="Junior Social Media Manager"
         jobsDescriptions="With some of my friends we tried to start a clothing brand."
         />
-        <div style={{textAlign: 'center'}} onClick={this.handleShowEditChange}>
+        <div style={{textAlign: 'center'}}>
         <Tappable onTap={this.handleShowEditExperience} style={{ cursor: 'pointer' }}>
         <Button  className="privatebutton" style={{backgroundColor: '#fc9c35'}}>
         <div  style={{margin:'0 auto', textAlign:'center'}}>
