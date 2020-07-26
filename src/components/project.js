@@ -150,7 +150,7 @@ class Project extends Component {
                         </CardMenu>
                     </Card>
 
-                    <Card data-aos="zoom-in" shadow={5}>
+                    <Card  shadow={5}>
                         <CardTitle className="mdl-card__title_e_commerce" style={{ color: '#fff', height: '176px'}}></CardTitle>
                         <CardText><h4 style={{ color: '#da7c18', fontFamily: 'Roboto Mono,monospace' }}>E-COMMERCE STORE</h4> Demo: e-commerce site for a skateshop.  <br></br>Built with React js.<br></br>
                       Go to my Instagram account to see my frontend projects<a style={{ color: '#da7c18' }} href="https://www.instagram.com/nicola.montaleone/?hl=it"> here</a> </CardText>

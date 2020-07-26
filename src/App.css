@@ -503,6 +503,17 @@ input[type='submit'] {
 
 
 @media only screen and (min-width: 800px) {
+  textarea {
+    background-color: #e6e6e6;
+    color: #827ffe;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: none;
+    width: 85%;
+    height: 150%;
+    padding: 20px 30px;
+    border-radius: 30px;
+  }
   .login input[type="password"] {
     background-color: #e6e6e6;
   padding: 20px 30px;
