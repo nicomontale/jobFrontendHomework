@@ -17,12 +17,18 @@ You will also see any lint errors in the console.
 
 ###  LIBRARIES
 
-•React-mdl<br />
-•Aos<br />
+•REACT-MDL<br />
+•AOS<br />
+•REACT-ROUTER-DOM<br />
+•REACT-TAPPABLE<br />
 
 ###  DATA
 Context: https://it.reactjs.org/docs/context.html<br />
 
+###  FUTURE IMPLEMENTATIONS
+•NODEMAILER
+•ADD, DELETE, UPDATE FUNCTIONALITY
+•CREDENTIALS
 
 ###  UX
 <img src="/UX/1.png" alt="Img1"/>

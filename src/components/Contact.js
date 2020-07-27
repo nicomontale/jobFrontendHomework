@@ -33,7 +33,7 @@ export default class Contact extends Component {
 
             <div className="contact">
               {/* Linkedin */}
-              <form action="nicola.montaleone95@gmail.com" method="post" encType="text/plain" style={{ borderRadius: '20px', width: '200%', height: '450%', textAlign:'center' }} >
+              <form style={{ borderRadius: '20px', width: '200%', height: '450%', textAlign:'center' }} >
 
                 <label>
                  
