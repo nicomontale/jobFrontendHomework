@@ -30,7 +30,8 @@ Context: https://it.reactjs.org/docs/context.html<br />
 •ADD, DELETE, UPDATE FUNCTIONALITY<br />
 •CREDENTIALS<br />
 
-###  UX
+
+###  UI
 <img src="/UX/1.png" alt="Img1"/>
 
 <img src="/UX/2.png" alt="Img2"/>
