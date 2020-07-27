@@ -26,9 +26,9 @@ You will also see any lint errors in the console.
 Context: https://it.reactjs.org/docs/context.html<br />
 
 ###  FUTURE IMPLEMENTATIONS
-•NODEMAILER
-•ADD, DELETE, UPDATE FUNCTIONALITY
-•CREDENTIALS
+•NODEMAILER<br />
+•ADD, DELETE, UPDATE FUNCTIONALITY<br />
+•CREDENTIALS<br />
 
 ###  UX
 <img src="/UX/1.png" alt="Img1"/>
