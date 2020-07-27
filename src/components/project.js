@@ -159,7 +159,7 @@ class Project extends Component {
 
                         </CardActions></Tappable>
                         <CardMenu style={{ color: '#fff' }} >
-                           <a href="www.facebook.com"><IconButton className="clickable" name="shop" style={{ color: '#da7c18', width: '58px', height: '58px', minWidth: 'initial', cursor: 'pointer' }} /></a> 
+                           <a href="https://github.com/nicomontale"><IconButton className="clickable" name="shop" style={{ color: '#da7c18', width: '58px', height: '58px', minWidth: 'initial', cursor: 'pointer' }} /></a> 
 
                         </CardMenu>
                     </Card>
